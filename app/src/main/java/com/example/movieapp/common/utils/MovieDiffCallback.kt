@@ -1,8 +1,8 @@
-package com.example.movieapp.helper
+package com.example.movieapp.common.utils
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.movieapp.data.model.Movie
-import com.example.movieapp.data.model.MovieResponse
+import com.example.movieapp.data.remote.response.Movies
+import com.example.movieapp.domain.model.Movie
 
 
 //buat ngecek apa ada perbuahan list note. Akan dipanggil di adapter

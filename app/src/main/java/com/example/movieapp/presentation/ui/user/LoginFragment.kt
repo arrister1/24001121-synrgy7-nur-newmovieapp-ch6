@@ -1,4 +1,4 @@
-package com.example.movieapp.ui.user
+package com.example.movieapp.presentation.ui.user
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,18 +9,20 @@ import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.movieapp.R
-import com.example.movieapp.databinding.ActivityMainBinding
 import com.example.movieapp.databinding.FragmentLoginBinding
-import com.example.movieapp.helper.DataStore
+import com.example.movieapp.data.local.DataStore
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import org.koin.android.ext.android.inject
+
+
 
 
 class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
-    private lateinit var dataStore: DataStore
+    private val dataStore: DataStore by inject()
 
 
     override fun onCreateView(
@@ -34,7 +36,7 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        dataStore = DataStore(requireContext())
+        //dataStore = DataStore(requireContext())
 
         lifecycleScope.launch{
             dataStore.isLogin.collect {isLogin ->

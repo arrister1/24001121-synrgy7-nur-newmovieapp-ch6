@@ -1,13 +1,10 @@
-package com.example.movieapp.ui.main
+package com.example.movieapp.presentation.ui.main
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.example.movieapp.R
-import com.example.movieapp.data.model.Movie
+import com.example.movieapp.data.remote.response.Movies
 import com.example.movieapp.databinding.ActivityDetailBinding
-import com.example.movieapp.databinding.ActivityMainBinding
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var _activityDetailBinding: ActivityDetailBinding
@@ -20,9 +17,9 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //ambil data dari intent
-        val movie = intent.getParcelableExtra<Movie>("EXTRA_MOVIE")
+        val movies = intent.getParcelableExtra<Movies>("EXTRA_MOVIE")
 
-        movie?.let {
+        movies?.let {
             binding.tvDetailTitle.text = it.title
             binding.tvYearContent.text = it.date
             binding.tvDescContent.text = it.overview

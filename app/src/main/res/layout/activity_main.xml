@@ -6,7 +6,7 @@
     android:id="@+id/home"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/red7"
-    tools:context=".ui.main.MainActivity">
+    tools:context=".presentation.ui.main.MainActivity">
 
     <TextView
         android:id="@+id/tv_welcome"
@@ -27,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:layout_marginStart="3dp"
         android:fontFamily="@font/poppins_black"
         android:text="@string/username_sample"
         android:textColor="@color/red5"

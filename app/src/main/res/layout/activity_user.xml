@@ -5,7 +5,7 @@
     android:id="@+id/main_user"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.user.UserActivity">
+    tools:context=".presentation.ui.user.UserActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container_user"

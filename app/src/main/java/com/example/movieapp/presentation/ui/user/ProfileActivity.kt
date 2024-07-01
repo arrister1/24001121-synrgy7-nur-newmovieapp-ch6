@@ -1,4 +1,4 @@
-package com.example.movieapp.ui.user
+package com.example.movieapp.presentation.ui.user
 
 import android.app.Activity
 import android.content.Intent
@@ -18,23 +18,24 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.BitmapTransformation
-import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.example.movieapp.R
 import com.example.movieapp.databinding.ActivityProfileBinding
-import com.example.movieapp.helper.BlurHandler
-import com.example.movieapp.helper.DataStore
+import com.example.movieapp.common.utils.BlurHandler
+import com.example.movieapp.data.local.DataStore
 import kotlinx.coroutines.launch
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
+import org.koin.android.ext.android.inject
+
 
 
 class ProfileActivity : AppCompatActivity() {
     private var _binding: ActivityProfileBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var dataStore: DataStore
+    private val dataStore: DataStore by inject()
     private lateinit var cameraResultLauncher: ActivityResultLauncher<Intent>
     private lateinit var galleryResultLauncher: ActivityResultLauncher<Intent>
     private var imageUri: Uri? = null
@@ -51,7 +52,7 @@ class ProfileActivity : AppCompatActivity() {
         _binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        dataStore = DataStore(this)
+        //dataStore = DataStore(this)
 
         if (!isImageSelected) {
             Glide.with(this)

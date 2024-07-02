@@ -5,7 +5,6 @@ import com.example.movieapp.datas.remote.response.Movies
 import com.example.movieapp.domain.model.Movie
 
 
-//buat ngecek apa ada perbuahan list note. Akan dipanggil di adapter
 class MovieDiffCallback(private val oldNoteList: List<Movie>, private val newNoteList: List<Movie>) : DiffUtil.Callback() {
     override fun getOldListSize(): Int = oldNoteList.size
 

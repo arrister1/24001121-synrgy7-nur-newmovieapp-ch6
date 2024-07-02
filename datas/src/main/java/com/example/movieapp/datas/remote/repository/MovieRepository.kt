@@ -41,35 +41,3 @@ class MovieRepository( private val remoteDataSource: RemoteDataSource): IMovieRe
         }.flowOn(Dispatchers.IO)
         }
     }
-//    override fun getAllMovie(): Flow<Resource<List<Movie>>> {
-//        val result = MutableLiveData<Resource<List<Movie>>>()
-//        remoteDataSource.getAllMovie().observeForever{apiResponse ->
-//            when(apiResponse) {
-//                is ApiResponse.Success -> {
-//                    val movieList = apiResponse.data.map { it.toMovie() }
-//                    result.postValue(Resource.Success(movieList))
-//                }
-//                is ApiResponse.Empty -> {
-//                    result.postValue(Resource.Success(emptyList()))
-//                }
-//                is ApiResponse.Error -> {
-//                    result.postValue(Resource.Error(apiResponse.errorMessage, null))
-//                }
-//            }
-//        }
-//        return  result
-//    }
-//
-//
-//
-//}
-//class MovieRepository private constructor(private val remoteDataSource: RemoteDataSource): IMovieRepository {
-//     override suspend fun moviePopular():List<MovieResponse>{
-//        return remoteDataSource.moviePopular()
-//    }
-    /*
-    return
-    * ubah jadi moviePopular(): domainnya apa = .....moviePopuplar() di emit diubah jadi kekk yg di CoinApp di getCoinUseCase
-    * */
-  //  override suspend fun moviePopular() = remoteDataSource.moviePopular()
-//}

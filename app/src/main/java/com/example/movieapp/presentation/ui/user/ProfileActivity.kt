@@ -22,7 +22,7 @@ import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.example.movieapp.R
 import com.example.movieapp.databinding.ActivityProfileBinding
 import com.example.movieapp.common.utils.BlurHandler
-import com.example.movieapp.data.local.DataStore
+import com.example.movieapp.datas.local.DataStore
 import kotlinx.coroutines.launch
 import java.io.File
 import java.io.FileOutputStream

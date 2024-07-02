@@ -1,17 +1,8 @@
 package com.example.movieapp.presentation.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import com.example.movieapp.data.remote.network.ApiClient
-import com.example.movieapp.data.remote.response.MovieResponse
-import com.example.movieapp.data.local.DataStore
-import com.example.movieapp.data.remote.repository.MovieRepository
 import com.example.movieapp.domain.usecase.MovieUseCase
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class MovieViewModel(movieUseCase: MovieUseCase) : ViewModel() {
     val movie = movieUseCase.getAllMovie().asLiveData()

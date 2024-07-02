@@ -43,6 +43,11 @@ android {
 }
 
 dependencies {
+    implementation(project(":common"))
+    implementation(project(":datas"))
+    implementation(project(":domain"))
+
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -70,7 +75,6 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
     implementation("androidx.activity:activity-ktx:1.9.0")
     implementation("androidx.fragment:fragment-ktx:1.7.0")
-    //implementation("androidx.fragment:fragment-ktx:1.1.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
 

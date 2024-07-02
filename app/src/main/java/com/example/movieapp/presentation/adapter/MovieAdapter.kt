@@ -5,9 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.movieapp.data.remote.response.Movies
 import com.example.movieapp.databinding.ItemListBinding
-import com.example.movieapp.common.utils.MovieDiffCallback
+import com.example.movieapp.presentation.utils.MovieDiffCallback
 import com.example.movieapp.domain.model.Movie
 
 
@@ -28,7 +27,7 @@ class MovieAdapter(private val listener: OnItemClickListener) : RecyclerView.Ada
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = ItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = com.example.movieapp.databinding.ItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 

@@ -10,7 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentRegisterBinding
-import com.example.movieapp.data.local.DataStore
+import com.example.movieapp.datas.local.DataStore
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 

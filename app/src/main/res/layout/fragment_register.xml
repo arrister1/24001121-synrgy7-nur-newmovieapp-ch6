@@ -98,6 +98,7 @@
         app:layout_constraintEnd_toEndOf="@+id/et_regis_email_layout"
         app:layout_constraintHorizontal_bias="0.502"
         app:passwordToggleEnabled="true"
+        android:hint="@string/enter_password"
         app:layout_constraintStart_toStartOf="@+id/et_regis_email_layout"
         app:layout_constraintTop_toBottomOf="@+id/et_regis_email_layout">
 
@@ -106,7 +107,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:maxLines="1"
-            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -123,6 +125,7 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="@id/et_regis_pass1_layout"
         app:passwordToggleEnabled="true"
+        android:hint="@string/enter_password"
         app:layout_constraintTop_toBottomOf="@id/et_regis_pass1_layout">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -130,7 +133,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:maxLines="1"
-            android:hint="@string/enter_password_confirmation"
+            android:inputType="textPassword"
             />
 
     </com.google.android.material.textfield.TextInputLayout>

@@ -2,7 +2,7 @@
 plugins {
     alias(libs.plugins.androidApplication) apply false
     alias(libs.plugins.jetbrainsKotlinAndroid) apply false
-    id ("com.android.library") version "7.3.1" apply false
+    id ("com.android.library") version "8.0.0" apply false
     id("com.google.devtools.ksp") version "1.9.23-1.0.19" apply false
 }
 

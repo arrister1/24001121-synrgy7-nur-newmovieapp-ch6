@@ -3,8 +3,8 @@ package com.example.movieapp.presentation.ui.main
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.example.movieapp.data.remote.response.Movies
 import com.example.movieapp.databinding.ActivityDetailBinding
+import com.example.movieapp.datas.remote.response.Movies
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var _activityDetailBinding: ActivityDetailBinding

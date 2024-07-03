@@ -46,6 +46,7 @@ dependencies {
     implementation(project(":common"))
     implementation(project(":datas"))
     implementation(project(":domain"))
+    implementation(project(":presentation"))
 
 
 

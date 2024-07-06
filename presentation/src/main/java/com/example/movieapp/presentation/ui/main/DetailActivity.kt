@@ -1,9 +1,11 @@
 package com.example.movieapp.presentation.ui.main
 
+import android.os.Build
+
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.example.movieapp.datas.remote.response.Movies
+import com.example.movieapp.domain.model.Movie
 import com.example.movieapp.presentation.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {

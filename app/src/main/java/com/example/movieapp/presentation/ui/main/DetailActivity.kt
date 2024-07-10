@@ -1,5 +1,6 @@
 package com.example.movieapp.presentation.ui.main
 
+import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
@@ -17,11 +18,13 @@ class DetailActivity : AppCompatActivity() {
         _activityDetailBinding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val movies =
+        val movies = if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
+            intent.getParcelableExtra("EXTRA_MOVIE", Movie::class.java )
+        } else {
             @Suppress("DEPRECATION")
             intent.getParcelableExtra<Movie>("EXTRA_MOVIE")
 
-
+        }
 
         movies?.let {
             binding.tvDetailTitle.text = it.title
